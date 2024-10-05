@@ -143,6 +143,7 @@ NUMBERS = (
         getter=lambda inv: inv.get_charge_max_power_delta(),
         mapper=lambda v: v,
         setter=lambda inv, val: inv.set_charge_max_power_delta(val),
+        filter=lambda inv: True,
     ),
     GoodweNumberEntityDescription(
         key="min_discharge_soc",
