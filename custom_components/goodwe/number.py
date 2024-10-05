@@ -170,6 +170,7 @@ NUMBERS = (
         getter=lambda inv: inv.get_discharge_duration(),
         mapper=lambda v: v,
         setter=lambda inv, val: inv.set_discharge_duration(val),
+        filter=lambda inv: True,
     ),
     GoodweNumberEntityDescription(
         key="discharge_max_power_delta",
@@ -182,6 +183,7 @@ NUMBERS = (
         getter=lambda inv: inv.get_discharge_max_power_delta(),
         mapper=lambda v: v,
         setter=lambda inv, val: inv.set_discharge_max_power_delta(val),
+        filter=lambda inv: True,
     ),
 )
 
