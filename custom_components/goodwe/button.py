@@ -46,6 +46,24 @@ BUTTONS = (
         setting="stop",
         action=lambda inv: inv.write_setting("stop", 0),
     ),
+    GoodweButtonEntityDescription(
+        key="restart_inverter",
+        translation_key="restart_inverter",
+        setting="restart",
+        action=lambda inv: inv.write_setting("restart", 1),
+    ),
+    GoodweButtonEntityDescription(
+        key="wifi_reset",
+        translation_key="wifi_reset",
+        setting="wifi_reset",
+        action=lambda inv: inv.write_setting("wifi_reset", 1),
+    ),
+    GoodweButtonEntityDescription(
+        key="wifi_reload",
+        translation_key="wifi_reload",
+        setting="wifi_reload",
+        action=lambda inv: inv.write_setting("wifi_reload", 1),
+    ),
 )
 
 

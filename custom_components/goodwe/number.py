@@ -13,7 +13,7 @@ from homeassistant.components.number import (
     NumberEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import PERCENTAGE, EntityCategory, UnitOfPower
+from homeassistant.const import PERCENTAGE, EntityCategory, UnitOfPower, UnitOfTime
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -131,6 +131,56 @@ NUMBERS = (
         mapper=lambda v: v,
         setter=lambda inv, val: inv.write_setting("fast_charging_soc", val),
         filter=lambda inv: True,
+    ),
+    GoodweNumberEntityDescription(
+        key="charge_max_power_delta",
+        translation_key="charge_max_power_delta",
+        entity_category=EntityCategory.CONFIG,
+        device_class=NumberDeviceClass.POWER,
+        native_unit_of_measurement=UnitOfPower.WATT,
+        native_step=100,
+        native_min_value=0,
+        getter=lambda inv: inv.get_charge_max_power_delta(),
+        mapper=lambda v: v,
+        setter=lambda inv, val: inv.set_charge_max_power_delta(val),
+    ),
+    GoodweNumberEntityDescription(
+        key="min_discharge_soc",
+        translation_key="min_discharge_soc",
+        entity_category=EntityCategory.CONFIG,
+        native_unit_of_measurement=PERCENTAGE,
+        native_step=1,
+        native_min_value=0,
+        native_max_value=99,
+        getter=lambda inv: inv.get_min_discharge_soc(),
+        mapper=lambda v: v,
+        setter=lambda inv, val: inv.set_min_discharge_soc(val),
+        filter=lambda inv: True,
+    ),
+    GoodweNumberEntityDescription(
+        key="discharge_duration",
+        translation_key="discharge_duration",
+        entity_category=EntityCategory.CONFIG,
+        device_class=NumberDeviceClass.POWER,
+        native_unit_of_measurement=UnitOfTime.SECONDS,
+        native_step=1,
+        native_min_value=0,
+        native_max_value=65535,
+        getter=lambda inv: inv.get_discharge_duration(),
+        mapper=lambda v: v,
+        setter=lambda inv, val: inv.set_discharge_duration(val),
+    ),
+    GoodweNumberEntityDescription(
+        key="discharge_max_power_delta",
+        translation_key="discharge_max_power_delta",
+        entity_category=EntityCategory.CONFIG,
+        device_class=NumberDeviceClass.POWER,
+        native_unit_of_measurement=UnitOfPower.WATT,
+        native_step=100,
+        native_min_value=0,
+        getter=lambda inv: inv.get_discharge_max_power_delta(),
+        mapper=lambda v: v,
+        setter=lambda inv, val: inv.set_discharge_max_power_delta(val),
     ),
 )
 

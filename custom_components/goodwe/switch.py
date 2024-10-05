@@ -51,6 +51,13 @@ SWITCHES = (
         setting="fast_charging",
         polling_interval=30,
     ),
+    GoodweSwitchEntityDescription(
+        key="wifi_modbus_tcp_enable",
+        translation_key="wifi_modbus_tcp_enable",
+        device_class=SwitchDeviceClass.SWITCH,
+        setting="wifi_modbus_tcp_enable",
+        polling_interval=5,
+    ),
 )
 
 
