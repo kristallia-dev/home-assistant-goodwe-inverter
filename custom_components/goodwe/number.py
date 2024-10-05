@@ -185,6 +185,16 @@ NUMBERS = (
         setter=lambda inv, val: inv.set_discharge_max_power_delta(val),
         filter=lambda inv: True,
     ),
+    GoodweNumberEntityDescription(
+        key="comm_address",
+        translation_key="comm_address",
+        entity_category=EntityCategory.CONFIG,
+        native_min_value=0,
+        getter=lambda inv: inv.read_setting("comm_address"),
+        mapper=lambda v: v,
+        setter=lambda inv, val: inv.write_setting("comm_address", val),
+        filter=lambda inv: True,
+    ),
 )
 
 

@@ -34,10 +34,10 @@
         "name": "Restart inverter"
       },
       "wifi_reset": {
-          "name": "Reset WiFi"
+        "name": "Reset WiFi"
       },
       "wifi_reload": {
-          "name": "Reload WiFi"
+        "name": "Reload WiFi"
       }
     },
     "number": {
@@ -60,16 +60,19 @@
         "name": "Fast charging SoC"
       },
       "charge_max_power_delta": {
-          "name": "Charge Max Power Delta"
+        "name": "Charge Max Power Delta"
       },
       "min_discharge_soc": {
-          "name": "Min Discharge SoC"
+        "name": "Min Discharge SoC"
       },
       "discharge_duration": {
-          "name": "Discharge Duration"
+        "name": "Discharge Duration"
       },
       "discharge_max_power_delta": {
-          "name": "Discharge Max Power Delta"
+        "name": "Discharge Max Power Delta"
+      },
+      "comm_address": {
+        "name": "Modbus Address"
       }
     },
     "select": {
@@ -97,7 +100,7 @@
         "name": "Load control"
       },
       "wifi_modbus_tcp_enable": {
-          "name": "WiFi Modbus TCP Enable"
+        "name": "WiFi Modbus TCP Enable"
       }
     }
   },

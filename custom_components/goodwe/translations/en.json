@@ -7,7 +7,7 @@
         "error": {
             "connection_error": "Failed to connect"
         },
-    "flow_title": "GoodWe",
+        "flow_title": "GoodWe",
         "step": {
             "user": {
                 "data": {
@@ -57,7 +57,7 @@
             "fast_charging_power": {
                 "name": "Fast charging power"
             },
-              "fast_charging_soc": {
+            "fast_charging_soc": {
                 "name": "Fast charging SoC"
             },
             "charge_max_power_delta": {
@@ -71,6 +71,9 @@
             },
             "discharge_max_power_delta": {
                 "name": "Discharge Max Power Delta"
+            },
+            "comm_address": {
+                "name": "Modbus Address"
             }
         },
         "select": {
@@ -103,7 +106,7 @@
             },
             "fast_charging_switch": {
                 "name": "Fast charging switch"
-              },
+            },
             "load_control": {
                 "name": "Load control"
             },
@@ -130,4 +133,3 @@
         }
     }
 }
-

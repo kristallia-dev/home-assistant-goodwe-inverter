@@ -40,7 +40,7 @@
         "default": "mdi:battery-arrow-up"
       },
       "charge_max_power_delta": {
-        "default": "battery-charging-high"
+        "default": "mdi:battery-charging-high"
       },
       "min_discharge_soc": {
         "default": "mdi:battery-arrow-down"
@@ -50,6 +50,9 @@
       },
       "discharge_max_power_delta": {
         "default": "mdi:battery-charging-low"
+      },
+      "comm_address": {
+        "default": "mdi:link-variant"
       }
     },
     "select": {
