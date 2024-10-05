@@ -9,6 +9,15 @@
       },
       "stop_inverter": {
         "default": "mdi:power-off"
+      },
+      "restart_inverter": {
+        "default": "mdi:restart"
+      },
+      "wifi_reset": {
+        "default": "mdi:wifi-sync"
+      },
+      "wifi_reload": {
+        "default": "mdi:wifi-refresh"
       }
     },
     "number": {
@@ -29,6 +38,18 @@
       },
       "fast_charging_soc": {
         "default": "mdi:battery-arrow-up"
+      },
+      "charge_max_power_delta": {
+        "default": "battery-charging-high"
+      },
+      "min_discharge_soc": {
+        "default": "mdi:battery-arrow-down"
+      },
+      "discharge_duration": {
+        "default": "mdi:battery-clock"
+      },
+      "discharge_max_power_delta": {
+        "default": "mdi:battery-charging-low"
       }
     },
     "select": {
@@ -56,6 +77,13 @@
         "state": {
           "on": "mdi:battery-arrow-up",
           "off": "mdi:battery-medium"
+        }
+      },
+      "wifi_modbus_tcp_enable": {
+        "default": "mdi:wifi-alert",
+        "state": {
+          "on": "mdi:wifi",
+          "off": "mdi:wifi-cancel"
         }
       }
     }

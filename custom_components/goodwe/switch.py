@@ -34,7 +34,7 @@ SWITCHES = (
     GoodweSwitchEntityDescription(
         key="load_control",
         translation_key="load_control",
-        device_class=SwitchDeviceClass.OUTLET,
+        device_class=SwitchDeviceClass.SWITCH,
         setting="load_control_switch",
     ),
     GoodweSwitchEntityDescription(
